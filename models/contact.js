@@ -9,6 +9,10 @@ const Contact = sequelize.define('contacts', {
     lastName: {
       type: DataTypes.STRING
       // allowNull defaults to true
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      defaultValue:0
     }
   }, {
     // Other model options go here
@@ -19,6 +23,8 @@ const Contact = sequelize.define('contacts', {
     //updatedAt:true,
     //updatedAt:'update_at', //rename column name
   });
+
+  return Contact;
 }
 
 
