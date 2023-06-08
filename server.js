@@ -5,6 +5,7 @@ require('dotenv').config();
 
 //Include all routes
 const userRoutes = require("./routes/userRoutes");
+const modelQueryRoutes = require("./routes/modelQuery");
 
 //call db connection
 require('./models'); //include db file
@@ -21,6 +22,7 @@ if (process.env.NODE_ENV === 'development') {
 //API endpoints
 //app.get('/addContactTest',userController.addContactTest)
 app.use('/api/users',userRoutes);
+app.use('/api/modelQuery',modelQueryRoutes);
 
 
 
